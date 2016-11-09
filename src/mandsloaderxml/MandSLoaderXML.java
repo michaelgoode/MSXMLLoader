@@ -38,7 +38,7 @@ import java.sql.Connection;
 public class MandSLoaderXML {
 
     private static final Logger LOG = Logger.getLogger(MandSLoaderXML.class.getName());
-    private static final String version = "MANDSLoaderXML Version 6.0.0 created by Michael Goode (09-11-2016)"; 
+    private static final String version = "MANDSLoaderXML Version 6.0.1 created by Michael Goode (09-11-2016)"; 
 
     static FTPProperties ftpProperties = new FTPProperties();
     static ConfigProperties configProperties = new ConfigProperties();
@@ -51,20 +51,6 @@ public class MandSLoaderXML {
         
         System.out.println(version);
         
-        DBManager db = DBManager.getInstance();
-        Connection conn = db.getEDIConnection();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        String filename = "test.txt";
-        String fname = filename.substring(0, filename.indexOf("."));
-
         Initialise();
         HashMap fileparams = getHttpFiles();
         if (fileparams.isEmpty()) {
