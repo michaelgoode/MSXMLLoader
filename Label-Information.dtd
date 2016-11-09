@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT label-information (stroke+)>
+<!ATTLIST label-information
+	date CDATA #IMPLIED
+	time CDATA #IMPLIED
+	record-count CDATA #IMPLIED
+	run-number CDATA #IMPLIED
+>
+<!ELEMENT stroke (stroke-number, stroke-description, contract-number, contract-status, department-number, season, supplier-series, country-code, productdesc, stroke-label*, colour+)>
+<!ATTLIST stroke
+	date-last-modified CDATA #IMPLIED
+>
+<!ELEMENT stroke-number (#PCDATA)>
+<!ELEMENT stroke-description (#PCDATA)>
+<!ELEMENT contract-number (#PCDATA)>
+<!ELEMENT contract-status (#PCDATA)>
+<!ELEMENT department-number (#PCDATA)>
+<!ELEMENT season (#PCDATA)>
+<!ELEMENT supplier-series (#PCDATA)>
+<!ELEMENT country-code (#PCDATA)>
+<!ELEMENT productdesc (#PCDATA)>
+<!ELEMENT stroke-label (label-ref, label-category, label-type, label-order*, set-name*, box-quantity*)>
+<!ELEMENT colour (colour-name, colour-description, story-description, colour-label*, size*)>
+<!ELEMENT colour-name (#PCDATA)>
+<!ELEMENT colour-description (#PCDATA)>
+<!ELEMENT story-description (#PCDATA)>
+<!ELEMENT colour-label (label-ref, label-category, label-type,  label-order*, set-name*, box-quantity*)>
+<!ELEMENT size (primary-size, size-label*, upc+)>
+<!ELEMENT primary-size (#PCDATA)>
+<!ELEMENT size-label (label-ref, label-category, label-type,  label-order*, set-name*, box-quantity*)>
+<!ELEMENT upc (upc-number, secondary-size, selling-price, upc-label*)>
+<!ELEMENT upc-number (#PCDATA)>
+<!ELEMENT secondary-size (#PCDATA)>
+<!ELEMENT selling-price (#PCDATA)>
+<!ELEMENT upc-label (label-ref, label-category, label-type,  label-order*, set-name*, box-quantity*)>
+<!ELEMENT label-ref (#PCDATA)>
+<!ELEMENT label-category (#PCDATA)>
+<!ELEMENT label-type (#PCDATA)>
+<!ELEMENT label-order (#PCDATA)>
+<!ELEMENT set-name (#PCDATA)>
+<!ELEMENT box-quantity (#PCDATA)>
